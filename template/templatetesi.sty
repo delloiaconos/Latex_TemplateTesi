@@ -17,20 +17,36 @@
 \hypersetup{hidelinks}
 \urlstyle{same}
 
-%% SDI: Comandi Template TESI
-\newcommand{\defUniversita}[1]{\newcommand{\tesiUniversita}{#1}}
-\newcommand{\defDipartimento}[1]{\newcommand{\tesiDipartimento}{#1}}
-\newcommand{\defCdL}[1]{\newcommand{\tesiCdL}{#1}}
 
-\newcommand{\defStudente}[1]{\newcommand{\tesiStudente}{#1}}
-\newcommand{\defMatricola}[1]{\newcommand{\tesiMatricola}{#1}}
-\newcommand{\defTitolo}[1]{\newcommand{\tesiTitolo}{#1}}
-\newcommand{\defAA}[1]{\newcommand{\tesiAA}{#1}}
+\usepackage{ifthen}
 
+\newboolean{tesiAbilitaDedica}
+\newboolean{tesiAbilitaRingraziamenti}
+
+
+%% Comandi vuoti per il template
+\newcommand{\tesiUniversita}{\empty}
+\newcommand{\tesiDipartimento}{\empty}
+\newcommand{\tesiCdL}{\empty}
+
+\newcommand{\tesiStudente}{\empty}
+\newcommand{\tesiMatricola}{\empty}
+\newcommand{\tesiTitolo}{\empty}
+\newcommand{\tesiAA}{\empty}
 
 \newcommand{\tesiRelatoreA}{\empty}
 
+%% BEGIN: Info Template Tesi
+\newcommand{\defUniversita}[1]{\renewcommand{\tesiUniversita}{#1}}
+\newcommand{\defDipartimento}[1]{\renewcommand{\tesiDipartimento}{#1}}
+\newcommand{\defCdL}[1]{\renewcommand{\tesiCdL}{#1}}
+
+\newcommand{\defStudente}[1]{\renewcommand{\tesiStudente}{#1}}
+\newcommand{\defMatricola}[1]{\renewcommand{\tesiMatricola}{#1}}
+\newcommand{\defTitolo}[1]{\renewcommand{\tesiTitolo}{#1}}
+\newcommand{\defAA}[1]{\renewcommand{\tesiAA}{#1}}
 
 \newcommand{\defRelatoreA}[1]{\renewcommand{\tesiRelatoreA}{#1}}
 \newcommand{\defRelatoreB}[1]{\newcommand{\tesiRelatoreB}{#1}}
 \newcommand{\defRelatoreC}[1]{\newcommand{\tesiRelatoreC}{#1}}
+% END: Info Template Tesi

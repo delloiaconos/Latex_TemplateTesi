@@ -15,7 +15,11 @@
 \input{template/frontespizio}
 
 % Dedica (se abilitata)
-\input{chapters/Dedica}
+\ifthenelse{\boolean{tesiAbilitaDedica}}{
+    \IfFileExists{optionals/Dedica}{
+        \input{optionals/Dedica}
+    }{}
+}{}
 
 %  Indice, numerazione delle pagine romana
 \pagenumbering{Roman}
@@ -42,6 +46,11 @@
 \printbibliography[heading=bibintoc]    
 
 % Ringraziamenti (se abilitati)
-\input{chapters/Ringraziamenti}          
+\ifthenelse{\boolean{tesiAbilitaRingraziamenti}}{
+    \IfFileExists{optionals/Ringraziamenti}{
+        \input{optionals/Ringraziamenti}
+    }{}
+}{}
+
 
 \end{document}
