@@ -33,22 +33,21 @@
 
     \begin{flushleft}
     {\fontsize{17}{17}\fontfamily{lmss}\selectfont 
-             \begin{tabular}{rl}
-             \textbf{Relatore:} &  \tesiRelatoreA \\ 
-             \textbf{Correlatore:} & \tesiRelatoreB \\
-                                   & \tesiRelatoreC 
+        \begin{tabular}{rl}
+            \textbf{Relatore:} &  \tesiRelatoreA \\ 
+            \ifx \tesiRelatoreB \undefined 
+                 
+            \else 
+                \textbf{Correlatore:} \uppercase{&} \tesiRelatoreB \\
+                \ifx \tesiRelatoreC \undefined
+                
+                \else
+                    \uppercase{&} \tesiRelatoreC \\
+                \fi
+            \fi   
         \end{tabular}
     }
     \end{flushleft}
-       
-    %\begin{flushleft}
-    %    {\fontsize{17}{17}\fontfamily{lmss}\selectfont 
-    %        \textbf{Relatore:}    \tesiRelatoreA\\
-    %        \vspace{0,5cm}
-    %        \textbf{Correlatore:}   \tesiRelatoreB \\
-    %        \textbf{\hspace{3.3cm}} \tesiRelatoreC \\
-    %    }
-    %\end{flushleft}
 
     \vspace*{5mm}
     \begin{flushright}
@@ -59,17 +58,6 @@
         \end{tabular}
     }
     \end{flushright}
-    
-    %\begin{flushright}
-    %    % completa con il tuo nome e matricola
-    %    {\fontsize{17}{17}\fontfamily{lmss}\selectfont 
-    %        Laureando:\hspace{5cm}\\
-    %        \hspace{3cm}\tesiStudente\\
-    %        Matricola:\hspace{5cm}\\
-    %        \hspace{3cm}\tesiMatricola\\
-    %    }
-    %\end{flushright}
-
 
     \vspace*{5mm}
 
