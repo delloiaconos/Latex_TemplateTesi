@@ -1,51 +1,47 @@
 \documentclass[12pt,a4paper,oneside,openright]{report}
-\usepackage{template/templateunibs}
-\include{utilities}
+\usepackage{template/templatetesi}
 
+\include{template/utilities}
+\input{info}
 
 \graphicspath{{images/}}     % dove trovare le immagini
 \bibliography{bibliografia}  % dove trovare la bibliografia
 
 
-%% BEGIN: Parametri Tesi
-%% Definizione di alcuni paramteri per la compilazione del frontespizio.
-\defDipartimento{Dipartimento di Ingegneria dell'Informazione}
-\defCdL{Corso di Laurea in\\Ingegneria Elettronica}
-
-\defStudente{Nome Cognome}
-\defMatricola{123456789}
-\defTitolo{Titolo della Tesi\\su più righe}
-\defAA{2023/2024}
-
-\defRelatoreA{Chiar.ma Prof.ssa Alessandra Flammini}
-\defRelatoreB{Dott. Salvatore Dello Iacono}
-%% END: Parametri Tesi
-
-
 \begin{document}
 \onehalfspacing
 
-%\frontmatter
+% Frontespizio
 \input{template/frontespizio}
-\tableofcontents            %  Creazione dell'indice
 
-%\mainmatter                 % Corpo della tesi
+% Dedica (se abilitata)
+\input{chapters/Dedica}
+
+%  Indice, numerazione delle pagine romana
+\pagenumbering{Roman}
+\tableofcontents            
+\newpage
+
+% Corpo della tesi, numerazione pagine arabica
+\setcounter{page}{0}
+\pagenumbering{arabic}
+\setcounter{page}{1}
 
 \input{chapters/Introduzione}
 \input{chapters/Capitolo01}
 \input{chapters/Capitolo02}
 \input{chapters/Capitolo03}
-
-%\backmatter
+\input{chapters/Capitolo04}
 \input{chapters/Conclusioni}
 
-
+% Appendice
 \appendix 
 \input{chapters/Appendice}               % appendici
 
-\printbibliography[heading=bibintoc]    % bibliografia
+% Bibliografia
+\printbibliography[heading=bibintoc]    
 
-\input{chapters/Ringraziamenti}          % ringraziamenti
-
+% Ringraziamenti (se abilitati)
+\input{chapters/Ringraziamenti}          
 
 \end{document}

@@ -1,28 +1,30 @@
 \newgeometry{left=20mm,right=20mm,top=25mm,bottom=20mm}
 \begin{titlepage}
     \begin{center}
-
-        \begin{figure}[t]
+    
+        {\fontsize{20}{20}\fontfamily{lmss}\selectfont\tesiUniversita}
+        \vspace*{5mm}
+        
+        \begin{figure}[h]
             \centering
-            \includegraphics[width=72.4mm,height=30mm]{template/LogoUniBS.png}    
+            \includegraphics[width=72.4mm,height=30mm]{template/UniversityLogo.png}    
         \end{figure}
+        \vspace*{5mm}
 
-        \vspace*{10mm}
-
-        {\fontsize{17}{17}\fontfamily{lmss}\selectfont
+        {\fontsize{18}{18}\fontfamily{lmss}\selectfont
             \tesiDipartimento
         }
 
         \vspace*{10mm}
 
-        {\fontsize{17}{17}\fontfamily{cmss}\selectfont
-            \tesiCdL
+        {\fontsize{16}{18}\fontfamily{cmss}\selectfont
+            \tesiCdL\par
         }    
 
         \vspace*{20mm}
 
-        {\fontsize{20}{20}\fontfamily{lmss}\selectfont 
-            \tesiTitolo
+        {\fontsize{30}{40}\fontfamily{lmss}\selectfont 
+            \textbf{\tesiTitolo}\par
         }
 
     \end{center}
@@ -30,27 +32,43 @@
     \vfill
 
     \begin{flushleft}
-        % inserisci il nome del relatore
-        {\fontsize{17}{17}\fontfamily{lmss}\selectfont 
-            \textbf{Relatore:} \tesiRelatoreA\\
-            \vspace{0,5cm}
-            \textbf{Correlatore:} \tesiRelatoreB \\
-        }
-
+    {\fontsize{17}{17}\fontfamily{lmss}\selectfont 
+             \begin{tabular}{rl}
+             \textbf{Relatore:} &  \tesiRelatoreA \\ 
+             \textbf{Correlatore:} & \tesiRelatoreB \\
+                                   & \tesiRelatoreC 
+        \end{tabular}
+    }
     \end{flushleft}
+       
+    %\begin{flushleft}
+    %    {\fontsize{17}{17}\fontfamily{lmss}\selectfont 
+    %        \textbf{Relatore:}    \tesiRelatoreA\\
+    %        \vspace{0,5cm}
+    %        \textbf{Correlatore:}   \tesiRelatoreB \\
+    %        \textbf{\hspace{3.3cm}} \tesiRelatoreC \\
+    %    }
+    %\end{flushleft}
 
     \vspace*{5mm}
-
     \begin{flushright}
-        % completa con il tuo nome e matricola
-        {\fontsize{17}{17}\fontfamily{lmss}\selectfont 
-            Laureanda:\\
-            \tesiStudente\\
-            Matricola:\\
-            \tesiMatricola\\
-        }
-
+    {\fontsize{17}{17}\fontfamily{lmss}\selectfont 
+             \begin{tabular}{rl}
+             \textbf{Laureando:} & \tesiStudente \\
+             \textbf{Matricola:} & \tesiMatricola  
+        \end{tabular}
+    }
     \end{flushright}
+    
+    %\begin{flushright}
+    %    % completa con il tuo nome e matricola
+    %    {\fontsize{17}{17}\fontfamily{lmss}\selectfont 
+    %        Laureando:\hspace{5cm}\\
+    %        \hspace{3cm}\tesiStudente\\
+    %        Matricola:\hspace{5cm}\\
+    %        \hspace{3cm}\tesiMatricola\\
+    %    }
+    %\end{flushright}
 
 
     \vspace*{5mm}
@@ -58,7 +76,6 @@
     \rule{0.8\textwidth}{0.4pt}
     \begin{center}
     {\fontsize{17}{17}\fontfamily{lmss}\selectfont 
-        % specifica l'anno accademico
         Anno Accademico \tesiAA
     }
     \end{center}
